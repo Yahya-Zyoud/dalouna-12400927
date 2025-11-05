@@ -1,0 +1,585 @@
+/* 
+ css/styles.css 
+ Student Name: Yahya Zyoud
+ Student Id: 12400927
+*/
+
+:root {
+  --bg: #faf7f2;
+  --text: hwb(0 12% 88%);
+  --muted: #6b6b6b;
+  --brand: #216869;
+  --brand-2: #49a078;
+  --card: #ffffff;
+  --border: #e9e3db;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.header-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9e3db;
+  padding: 8px 12px;
+}
+
+.left-header {
+  color: #216869;
+  font-weight: bold;
+  margin: 6px 10px;
+  margin-left: 50px;
+}
+
+.links {
+  list-style: none;
+  color: #49a078;
+  display: flex;
+  gap: 15px;
+  margin-right: 50px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--brand);
+  font-weight: bold;
+  margin: 10px 14px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+/* header links doen */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.home {
+  background-color: #49a078;
+  color: black;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.botton {
+  background-color: #2a5d5a;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.botton:hover {
+  background-color: #1e4644;
+}
+/* hero img and fron content done */
+
+.about-us {
+  background-color: #faf7f2;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container-about {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  width: 90%;
+}
+
+.card {
+  width: calc(50% - 15px);
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #1c1c1c;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card p {
+  color: #333;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.info {
+  color: var(--muted) !important;
+  font-size: 0.9rem;
+}
+
+.roles {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.roles span {
+  background-color: white;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 500;
+  border: none;
+}
+
+.info {
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+/* about us nad chefs note done */
+.menu {
+  background-color: var(--bg);
+  padding: 80px 0;
+}
+
+.container-menu {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.container-menu h2 {
+  flex-basis: 100%;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.menu-type {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.menu-type h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.menu-meal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.menu-meal:last-child {
+  border-bottom: none;
+}
+
+.ingredients strong {
+  color: var(--text);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ingredients p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.cost {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.note {
+  flex-basis: 100%;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  .menu-type {
+    flex: 1 1 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-type {
+    flex: 1 1 100%;
+  }
+}
+/* 3 cards of the menu done */
+
+.hours {
+  background-color: var(--bg);
+  padding: 60px 0;
+}
+
+.container-hours {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.info {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  flex: 1 1 calc(50% - 15px);
+  box-sizing: border-box;
+}
+
+.info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.hours-card {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hours-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.hours-card li:last-child {
+  border-bottom: none;
+}
+
+.info p {
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.info a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.requests {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .info {
+    flex: 1 1 100%;
+  }
+}
+/* hours card an dreserver card done */
+
+
+.site-footer {
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+  text-align: center;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.site-footer a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+/* footer done */
+
+
+.about-us .card .info,
+.about-us .card .roles {
+  border: none;
+}
+
+.about-us .card .roles span {
+  border: 1px solid var(--border);
+  background-color: #fff;
+}
+
+
+
+.find-us {
+  background-color: var(--bg);
+  padding: 60px 0;
+}
+
+.container-find {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+
+.find-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  flex: 1 1 calc(50% - 10px); 
+  padding: 24px 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.find-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.find-card p {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+
+.find-card .info-addres,
+.info .requests {
+  color: var(--muted) !important; 
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+
+.find-card-map {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  flex: 1 1 calc(50% - 10px);
+  min-height: 220px;
+  display: flex;
+}
+
+.find-card-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .container-find {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .find-card {
+    flex: 1 1 100%;
+  }
+
+  .find-card.map {
+    height: 220px;
+  }
+}
+
+.find-card{
+  justify-content: flex-start; 
+}
+
+.find-card h3{ margin-top: 0; } 
+
+@media (max-width: 768px) {
+  .header-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .links {
+    flex-direction: column;    
+    gap: 8px;
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+
+  .links a {
+    display: block;
+    padding: 5px 0;
+  }
+
+  .left-header {
+    margin-left: 0;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* edits on the errors and resbonsive things */
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--brand);
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .header-links {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+ 
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e9e3db;
+    padding: 10px 0;
+    margin-top: 50px; 
+  }
+
+  .links a {
+    padding: 10px 20px;
+    display: block;
+  }
+
+ 
+  #menu-toggle:checked + .menu-icon + .links {
+    display: flex;
+  }
+}
+/* phone top link fixed */
