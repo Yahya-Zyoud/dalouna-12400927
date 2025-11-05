@@ -74,7 +74,6 @@ body {
   height: 100%;
 
   z-index: 0;
-  
 }
 
 .hero-content {
@@ -533,4 +532,54 @@ html, body {
   max-width: 100%;
 }
 
-/* edits on the errors and resonsive */
+/* edits on the errors and resbonsive things */
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--brand);
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .header-links {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+ 
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e9e3db;
+    padding: 10px 0;
+    margin-top: 50px; 
+  }
+
+  .links a {
+    padding: 10px 20px;
+    display: block;
+  }
+
+ 
+  #menu-toggle:checked + .menu-icon + .links {
+    display: flex;
+  }
+}
+/* phone top link fixed */
